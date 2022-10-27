@@ -17,12 +17,16 @@
 					console.log(this);
 				}
 			}
-
+			
 			const p1 = new Person('tom',18)
 			p1.study() //通过实例调用study方法
 			const x = p1.study
 			x()
 
+			//补充
+			//类中你所定义的方法已经在局部开启了严格模式
+			//严格模式this不指向window
+			//end
 		</script>
 	</body>
 </html>

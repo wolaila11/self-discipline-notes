@@ -39,6 +39,10 @@
 		const p = {name:'老刘',age:18,sex:'女'}
 		// console.log('@',...p);
 		// ReactDOM.render(<Person name={p.name} age={p.age} sex={p.sex}/>,document.getElementById('test3'))
+		
+		//==补充==
+		//react + babel 语法 {...p} ,表示对对象进行解构赋值（展开对象内容）；js里边是复制对象（不能展开对象内容），解构数组
+		//==end==
 		ReactDOM.render(<Person {...p}/>,document.getElementById('test3'))
 	</script>
 </body>

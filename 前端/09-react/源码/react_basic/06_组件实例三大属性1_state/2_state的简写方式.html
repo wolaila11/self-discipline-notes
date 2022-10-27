@@ -34,6 +34,10 @@
 		}
 		//2.渲染组件到页面
 		ReactDOM.render(<Weather/>,document.getElementById('test'))
+		//==补充==
+		//组件自定义的方法中this为undefined，如何定义组件中的方法？  需要用赋值语句来定义 原型对象中的方法如render（）
+		// 组件自定义方法中this指向问题如何解决？ 利用箭头函数
+		//箭头函数没有this，会往外层寻找this的指向
 				
 	</script>
 </body>
