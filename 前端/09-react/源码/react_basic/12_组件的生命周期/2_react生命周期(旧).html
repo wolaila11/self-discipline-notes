@@ -128,7 +128,9 @@
 		
 		//子组件B
 		class B extends React.Component{
-			//组件将要接收新的props的钩子
+			//组件将要接收新的props的钩子  
+			//==补充：当porps发生变化时执行，初次渲染时render时不执行  
+			//该函数中调用 this.setState() 将不会引起第二次渲染。==
 			componentWillReceiveProps(props){
 				console.log('B---componentWillReceiveProps',props);
 			}

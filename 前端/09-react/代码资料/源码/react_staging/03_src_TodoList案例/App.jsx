@@ -55,6 +55,7 @@ export default class App extends Component {
 		const {todos} = this.state
 		//加工数据
 		const newTodos = todos.map((todoObj)=>{
+			//==补充== {...obj}表示赋值obj对象  ==end==
 			return {...todoObj,done}
 		})
 		//更新状态

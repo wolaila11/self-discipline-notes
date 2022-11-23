@@ -22,6 +22,7 @@ export default class App extends Component {
 							<a className="list-group-item active" href="./home.html">Home</a> */}
 
 							{/* 在React中靠路由链接实现切换组件--编写路由链接 */}
+							{/*补充 NavLink 点谁给谁加active属性，bootstrap可以将active属性的标签高亮，但如果没有引入bootstrap呢？所以要指定activeClassName */}
 							<NavLink activeClassName="atguigu" className="list-group-item" to="/about">About</NavLink>
 							<NavLink activeClassName="atguigu" className="list-group-item" to="/home">Home</NavLink>
 						</div>

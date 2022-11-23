@@ -24,6 +24,15 @@ export default class Search extends Component {
 			
 		//发送网络请求---使用fetch发送（未优化）
 		/* fetch(`/api1/search/users2?q=${keyWord}`).then(
+			//==补充== 
+			//如果.then中指定成功或失败的回调函数的返回值为promise对象,就把该对象作为.then返回的promise实例对象，promiseState的值为成功或失败
+			//如果.then中指定成功或失败的回调函数的返回值为非promise对象，promise对象的状态就为成功，PromiseResult值就为返回的非promise值（举例
+			：如果断开浏览器的网络，下面代码如果没有return new Promise(()=>{})会得到'联系服务器失败了' '获取数据成功了'，这也就是error=>{}函数中return new Promise(()=>{})存在的原因）
+			//promise对象的值：
+			//1.promise实例对象中的PromiseResult属性保存着任务成功或失败的结果。
+			//2.promise实例对象中的PromiseState保存着状态，成功或失败，即fulfilled或rejected	
+			//==end==
+
 			response => {
 				console.log('联系服务器成功了');
 				return response.json()
@@ -38,6 +47,10 @@ export default class Search extends Component {
 		) */
 
 		//发送网络请求---使用fetch发送（优化）
+		//==补充==
+		//await只接受成功返回的结果
+		//关注分离设计思想
+		//==end==
 		try {
 			const response= await fetch(`/api1/search/users2?q=${keyWord}`)
 			const data = await response.json()

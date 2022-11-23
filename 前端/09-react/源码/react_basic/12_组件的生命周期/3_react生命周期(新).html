@@ -62,12 +62,18 @@
 			}
 			
 			//若state的值在任何时候都取决于props，那么可以使用getDerivedStateFromProps
+			//==补充 函数必须为static 返回值必须为null或者state obj（包含状态key 的对象）
+			// 返回状态对象会影响状态的更新
+			//结合图来看 只要此函数拦着 状态都听从props里==
 			static getDerivedStateFromProps(props,state){
 				console.log('getDerivedStateFromProps',props,state);
+				// return props
 				return null
 			}
 
 			//在更新之前获取快照
+			// == 补充 在最近一次渲染输出（提交到DOM节点）之前调用，它使得组件在发生更改之前从
+			//dom中捕获一些信息。此生命周期的任何返回值将作为参数传递给componetDidUpdate() ==
 			getSnapshotBeforeUpdate(){
 				console.log('getSnapshotBeforeUpdate');
 				return 'atguigu'

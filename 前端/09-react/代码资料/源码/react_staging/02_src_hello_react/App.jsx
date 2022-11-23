@@ -1,4 +1,5 @@
 //创建“外壳”组件App
+//{}表示非默认的
 import React,{Component} from 'react'
 import Hello from './components/Hello'
 import Welcome from './components/Welcome'
@@ -14,3 +15,4 @@ export default class App extends Component{
 		)
 	}
 }
+

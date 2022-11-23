@@ -54,6 +54,9 @@
 				return(
 					<div className="list" ref="list">
 						{
+							// ==补充
+							//  <div>{this.state.newsArr}</div>
+							//返回一个数组
 							this.state.newsArr.map((n,index)=>{
 								return <div key={index} className="news">{n}</div>
 							})

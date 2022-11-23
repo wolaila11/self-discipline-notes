@@ -15,6 +15,7 @@ export default class Item extends Component {
 	//勾选、取消勾选某一个todo的回调
 	handleCheck = (id)=>{
 		return (event)=>{
+			//==补充== 注意不能写成event.target.value,因为input框类型 改为checkbox了 ==end==
 			this.props.updateTodo(id,event.target.checked)
 		}
 	}
