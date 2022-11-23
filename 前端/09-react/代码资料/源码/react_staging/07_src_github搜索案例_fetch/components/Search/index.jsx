@@ -49,8 +49,10 @@ export default class Search extends Component {
 		//发送网络请求---使用fetch发送（优化）
 		//==补充==
 		//await只接受成功返回的结果
-		//关注分离设计思想
+		//关注分
+		//ss
 		//==end==
+		//ss
 		try {
 			const response= await fetch(`/api1/search/users2?q=${keyWord}`)
 			const data = await response.json()
