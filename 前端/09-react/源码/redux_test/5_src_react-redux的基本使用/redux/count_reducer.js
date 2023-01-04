@@ -4,7 +4,7 @@
 */
 import {INCREMENT,DECREMENT} from './constant'
 
-const initState = 0 //初始化状态
+const initState = 1 //初始化状态
 export default function countReducer(preState=initState,action){
 	// console.log(preState);
 	//从action对象中获取：type、data

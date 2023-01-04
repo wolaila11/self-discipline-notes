@@ -11,13 +11,15 @@ import {
 export default class Count extends Component {
 
 	state = {carName:'奔驰c63'}
-
+	//补充：这里放到app.jsx文件中了
 	/* componentDidMount(){
 		//检测redux中状态的变化，只要变化，就调用render
 		store.subscribe(()=>{
 			this.setState({})
 		})
 	} */
+
+	//补充： 一般对象：同步action  函数对象：异步action 
 
 	//加法
 	increment = ()=>{
